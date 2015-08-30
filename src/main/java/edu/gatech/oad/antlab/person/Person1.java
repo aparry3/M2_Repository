@@ -31,7 +31,10 @@ public class Person1 {
 	 */
 	private String calc(String input) {
 	  //Person 1 put your implementation here
-	  return null;
+		for (int i = 0; i < 2; i++) {
+            input = input.substring(1, input.length()) + input.charAt(0);
+        }
+	  	return input;
 	}
 	
 	/**
