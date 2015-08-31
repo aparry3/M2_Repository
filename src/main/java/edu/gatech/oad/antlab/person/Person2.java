@@ -1,4 +1,5 @@
 package edu.gatech.oad.antlab.person;
+import java.util.Random;
 
 /**
  *  A simple class for person 2
@@ -31,7 +32,18 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-	  return null;
+		char anArray[] = input.toCharArray();
+		Random rand = new Random();
+		int size = anArray.length-1;
+		int one = 0;
+		while(one < size) {
+			int two = rand.nextInt(size);
+			char swap = anArray[one];
+			anArray[one] = anArray[two];
+			anArray[two] = swap;
+			one = one + 1;
+		}
+	  return new String(anArray);
 	}
 	/**
 	 * Return a string rep of this object
