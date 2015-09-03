@@ -43,7 +43,7 @@ public class Person3 {
 	 */
 	private String calc(String input) {
         String reverse = "";
-		for (int i=1; i>=input.length(); i++) {
+		for (int i=1; i<=input.length(); i++) {
 			reverse = reverse + input.charAt(input.length()-i);
 		}
 		return reverse;
